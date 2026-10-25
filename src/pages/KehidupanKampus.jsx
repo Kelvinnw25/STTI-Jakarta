@@ -24,9 +24,24 @@ const tiles = [
 ]
 
 const stories = [
-  { avatar: images.avatarWoman, role: 'Cerita mahasiswa' },
-  { avatar: images.avatarMan1, role: 'Cerita dosen' },
-  { avatar: images.avatarMan2, role: 'Cerita komunitas' },
+  {
+    avatar: images.avatarWoman,
+    name: 'Maria Angelina Tampubolon',
+    role: 'Mahasiswa S1 Pendidikan Agama Kristen',
+    text: '“Di kelas, dosen tidak hanya menjelaskan teori. Kami diajak berdiskusi dan bertanya, sehingga belajar teologi terasa dekat dengan kehidupan sehari-hari dan pelayanan di gereja.”',
+  },
+  {
+    avatar: images.avatarMan1,
+    name: 'Daniel Kurniawan',
+    role: 'Mahasiswa S1 Teologi',
+    text: '“Suasana perpustakaan dan ruang diskusi membuat saya betah belajar. Belajar kelompok bersama teman-teman membantu saya memahami materi dengan lebih baik.”',
+  },
+  {
+    avatar: images.avatarMan2,
+    name: 'Yosua Hutapea',
+    role: 'Mahasiswa S2 Teologi',
+    text: '“Ibadah dan pujian bersama menjadi bagian dari keseharian di kampus. Kami saling mendoakan dan belajar melayani sebagai satu komunitas.”',
+  },
 ]
 
 // Tiga ikon diturunkan dari kalimat Visi pada referensi Profil.
@@ -70,11 +85,11 @@ export default function KehidupanKampus() {
         <SectionHeading
           id="stories-title"
           title="Cerita dari Komunitas"
-          intro="Ruang untuk cerita mahasiswa, dosen, dan komunitas. Kutipan asli belum tersedia."
+          intro="Cerita singkat mahasiswa tentang belajar, bertumbuh, dan melayani bersama di STTI Jakarta."
         />
         <ul role="list" className="grid-3">
           {stories.map((s) => (
-            <li key={s.role}>
+            <li key={s.name}>
               <QuoteCard {...s} />
             </li>
           ))}

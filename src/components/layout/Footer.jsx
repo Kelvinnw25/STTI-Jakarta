@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { navLinks, contact, institution } from '../../data/site'
-import Ph from '../ui/Ph'
 import { Logo } from './Navbar'
 
 export default function Footer() {
@@ -27,9 +26,9 @@ export default function Footer() {
           <h2 className="site-footer__title">Kontak</h2>
           <ul role="list" className="site-footer__contact">
             <li>
-              {contact.location}
+              <strong>{contact.building}</strong>
               <br />
-              <Ph>{contact.addressDetail}</Ph>
+              {contact.address}
             </li>
             <li>
               <a href={contact.emailUrl}>{contact.email}</a>
@@ -52,8 +51,7 @@ export default function Footer() {
 
       <div className="site-footer__legal">
         <div className="container">
-          <p>© {new Date().getFullYear()} STTI Jakarta. Prototipe antarmuka untuk presentasi.</p>
-          <p>Teks bertanda [ ... ] adalah placeholder; informasi resmi belum dikonfirmasi.</p>
+          <p>© 2026 STTI Jakarta</p>
         </div>
       </div>
     </footer>

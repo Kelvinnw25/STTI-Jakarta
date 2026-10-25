@@ -13,7 +13,6 @@ import {
   programs,
   recommendationTemplateUrl,
   rupiah,
-  s1FormDocUrl,
   transfer,
 } from '../data/programs'
 import { images } from '../data/images'
@@ -160,11 +159,6 @@ export default function Pendaftaran() {
                   <Button href={recommendationTemplateUrl} {...externalLink} variant="outline" size="sm">
                     <Icon name="file" size={18} /> Templat surat rekomendasi
                   </Button>
-                  {j.id === 's1' && (
-                    <Button href={s1FormDocUrl} {...externalLink} variant="outline" size="sm">
-                      <Icon name="file" size={18} /> Formulir S1 (Google Doc)
-                    </Button>
-                  )}
                   <Button to={`/program-studi?jenjang=${j.id}#detail`} variant="outline" size="sm">
                     Lihat rincian biaya
                   </Button>
@@ -205,13 +199,13 @@ export default function Pendaftaran() {
         <SectionHeading
           id="form-title"
           title="Formulir Pendaftaran"
-          intro="Coba alur pengisian di bawah ini. Untuk mendaftar sungguhan, gunakan formulir resmi di samping."
+          intro="Isi data berikut untuk mencoba alur pendaftaran."
         />
         <div className="form-layout">
           <form className="form-card" onSubmit={handleSubmit} noValidate aria-labelledby="form-title">
             <p className="demo-note" role="note">
               <strong>Prototipe:</strong> formulir ini hanya demonstrasi. Data dan berkas tidak dikirim, diunggah, atau
-              disimpan. Pendaftaran resmi dilakukan lewat Google Form.
+              disimpan.
             </p>
 
             {submitted && (
@@ -267,13 +261,13 @@ export default function Pendaftaran() {
             <span className="icon-tile icon-tile--square icon-tile--navy">
               <Icon name="file" size={30} />
             </span>
-            <h3 id="official-title">Daftar Resmi lewat Google Form</h3>
-            <p>Pilih formulir sesuai program studi yang Anda tuju.</p>
+            <h3 id="official-title">Daftar Sesuai Program Studi</h3>
+            <p>Pilih program studi yang Anda tuju.</p>
             <ul role="list" className="official-forms">
               {jenjang.flatMap((j) =>
                 j.programs.map((p) => (
                   <li key={p.id}>
-                    <Button href={p.formUrl} {...externalLink} size="sm" block>
+                    <Button placeholder size="sm" block>
                       {j.code} {p.name}
                     </Button>
                   </li>

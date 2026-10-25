@@ -18,7 +18,6 @@ export const bankAccounts = {
 }
 
 export const recommendationTemplateUrl = 'https://bit.ly/3WhQAC2'
-export const s1FormDocUrl = 'https://bit.ly/46hQVsZ'
 
 const COMMON_DOCS = [
   'Scan warna PDF KTP.',
@@ -46,7 +45,6 @@ export const jenjang = [
         degree: 'S.Th.',
         registrationFee: 500000,
         tuition: 20000000,
-        formUrl: 'https://forms.gle/ui83qTHbF6szbC627',
       },
       {
         id: 's1-pak',
@@ -54,7 +52,6 @@ export const jenjang = [
         degree: 'S.Pd.',
         registrationFee: 500000,
         tuition: 20000000,
-        formUrl: 'https://forms.gle/m4Ag7U7VnKegRWhw8',
       },
     ],
     documents: [
@@ -80,14 +77,12 @@ export const jenjang = [
         name: 'Teologi',
         registrationFee: 750000,
         tuition: 23000000,
-        formUrl: 'https://forms.gle/XvRGup8Rso3uNnS7A',
       },
       {
         id: 's2-pak',
         name: 'Pendidikan Agama Kristen',
         registrationFee: 750000,
         tuition: 23000000,
-        formUrl: 'https://forms.gle/1T4qQyAo7c24NdYs9',
       },
     ],
     documents: [
@@ -111,7 +106,6 @@ export const jenjang = [
         name: 'Teologi',
         registrationFee: 1500000,
         tuition: 57000000,
-        formUrl: 'https://forms.gle/61KCqtKHhNH4N26UA',
       },
     ],
     documents: [

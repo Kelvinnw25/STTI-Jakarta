@@ -888,3 +888,15 @@
     padding-left: 0;
   }
 }
+
+/* Peta Google Maps (iframe) */
+.map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 52vw, 520px);
+  border: 0;
+}
+
+.quote-card__text {
+  margin: 0;
+}

@@ -4,13 +4,10 @@ import CTABand from '../components/ui/CTABand'
 import FormField from '../components/ui/FormField'
 import Icon from '../components/ui/Icon'
 import IconTile from '../components/ui/IconTile'
-import Img from '../components/ui/Img'
 import PageHeader from '../components/ui/PageHeader'
-import Ph from '../components/ui/Ph'
 import Section from '../components/ui/Section'
 import SectionHeading from '../components/ui/SectionHeading'
-import { images } from '../data/images'
-import { contact, externalLink, whatsappChatUrl } from '../data/site'
+import { contact, externalLink, mapEmbedUrl, mapOpenUrl, whatsappChatUrl } from '../data/site'
 import useDemoForm from '../utils/useDemoForm'
 import { required, validateEmail } from '../utils/validation'
 
@@ -24,7 +21,7 @@ const validate = (v) => ({
 })
 
 const cards = [
-  { icon: 'pin', title: 'Alamat', lines: [contact.location, <Ph key="a">{contact.addressDetail}</Ph>] },
+  { icon: 'pin', title: 'Alamat', lines: [<strong key="b">{contact.building}</strong>, contact.address] },
   {
     icon: 'whatsapp',
     title: 'WhatsApp',
@@ -43,7 +40,7 @@ const cards = [
       </a>,
     ],
   },
-  { icon: 'clock', title: 'Jam Layanan', lines: [<Ph key="h">{contact.hours}</Ph>] },
+  { icon: 'clock', title: 'Jam Layanan', lines: [contact.hours] },
 ]
 
 export default function Kontak() {
@@ -76,13 +73,19 @@ export default function Kontak() {
       </Section>
 
       <Section labelledBy="map-title">
-        <SectionHeading id="map-title" title="Lokasi Kampus" intro={`${contact.location}. Pratinjau peta statis, bukan peta interaktif.`} />
-        <figure className="map">
-          <Img image={images.map} alt="Peta kawasan sekitar Ebenezer Building di Jl. H.R. Rasuna Said, Jakarta, dengan penanda lokasi merah" />
-        </figure>
+        <SectionHeading id="map-title" title="Lokasi Kampus" intro={`${contact.building}, ${contact.address}`} />
+        <div className="map">
+          <iframe
+            title="Peta lokasi kampus STTI Jakarta di Ebenezer Building"
+            src={mapEmbedUrl}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
         <div className="section__action">
-          <Button placeholder variant="outline">
-            Buka di Google Maps
+          <Button href={mapOpenUrl} {...externalLink} variant="outline">
+            <Icon name="pin" size={18} /> Buka di Google Maps
           </Button>
         </div>
       </Section>

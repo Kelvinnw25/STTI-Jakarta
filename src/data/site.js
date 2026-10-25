@@ -19,12 +19,12 @@ export const institution = {
   ],
 }
 
-// Email, WhatsApp, dan Instagram sudah dikonfirmasi. Nilai bertanda [ ... ] masih placeholder.
+// Nilai bertanda [ ... ] masih placeholder.
 export const contact = {
-  location: 'Ebenezer Building, Jl. H.R. Rasuna Said, Jakarta',
-  addressDetail: '[Alamat lengkap]',
-  phone: '[Nomor Telepon]',
-  hours: '[Jam Layanan]',
+  building: 'Ebenezer Building',
+  address:
+    'Jl. Setiabudi Selatan No.1, RT.5/RW.5, Kuningan, Karet, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12920.',
+  hours: '24 Jam',
 
   email: 'indonesiastt@gmail.com',
   emailUrl: 'mailto:indonesiastt@gmail.com',
@@ -35,6 +35,11 @@ export const contact = {
   instagram: '@sttijakarta',
   instagramUrl: 'https://www.instagram.com/sttijakarta/',
 }
+
+// Peta Google Maps: embed tanpa API key (query teks) dan tautan untuk membuka di aplikasi/situs Maps.
+const mapQuery = 'Ebenezer Building, Jl. Setiabudi Selatan No.1, Karet, Setiabudi, Jakarta Selatan 12920'
+export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`
+export const mapOpenUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`
 
 // Tautan WhatsApp dengan pesan pembuka agar penanya langsung punya konteks.
 export const whatsappChatUrl = `${contact.whatsappUrl}?text=${encodeURIComponent(

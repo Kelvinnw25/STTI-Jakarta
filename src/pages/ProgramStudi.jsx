@@ -20,7 +20,6 @@ import {
   jenjang,
   recommendationTemplateUrl,
   rupiah,
-  s1FormDocUrl,
   totalFee,
 } from '../data/programs'
 import { externalLink, whatsappChatUrl, contact } from '../data/site'
@@ -172,11 +171,6 @@ export default function ProgramStudi() {
                 <Button href={recommendationTemplateUrl} {...externalLink} variant="outline" size="sm">
                   <Icon name="file" size={18} /> Templat surat rekomendasi
                 </Button>
-                {selected.id === 's1' && (
-                  <Button href={s1FormDocUrl} {...externalLink} variant="outline" size="sm">
-                    <Icon name="file" size={18} /> Formulir S1 (Google Doc)
-                  </Button>
-                )}
               </div>
             </section>
 
@@ -191,15 +185,15 @@ export default function ProgramStudi() {
 
             <section aria-labelledby="form-links-title">
               <h3 id="form-links-title" className="info-main__title">
-                Formulir Pendaftaran Resmi
+                Daftar Program Studi
               </h3>
               <p className="info-main__note">
-                Isi formulir Google berikut sesuai program studi yang dipilih, lalu lampirkan dokumen persyaratan.
+                Pilih program studi yang ingin Anda daftar, lalu lengkapi dokumen persyaratan.
               </p>
               <div className="info-main__links">
                 {selected.programs.map((p) => (
-                  <Button key={p.id} href={p.formUrl} {...externalLink} size="sm">
-                    Formulir {selected.code} {p.name}
+                  <Button key={p.id} placeholder size="sm">
+                    Daftar {selected.code} {p.name}
                   </Button>
                 ))}
               </div>

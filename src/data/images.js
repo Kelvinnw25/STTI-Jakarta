@@ -9,7 +9,6 @@ export const images = {
   logoSm: img('logoSTTI-sm.png', 128, 128, 'Logo STTI Jakarta'),
 
   building: img('building.png', 231, 307, 'Gedung kampus berkaca biru dengan salib di bagian atas'),
-  map: img('Peta Kota di Sekitar Ebenezer Building.png', 1672, 941, 'Peta kawasan sekitar Ebenezer Building di Jl. H.R. Rasuna Said, Jakarta'),
 
   chillingRoom: img('ChillingRoom.png', 481, 319, 'Ruang konsultasi dengan sofa, meja kerja, dan rak buku'),
   classRoom: img('ClassRoom.png', 484, 312, 'Ruang kelas dengan proyektor, papan tulis, dan meja tersusun rapi'),
