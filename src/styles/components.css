@@ -146,10 +146,6 @@
   background: var(--white);
   color: var(--navy);
 }
-.btn[aria-disabled='true'] {
-  cursor: not-allowed;
-}
-
 /* ---------- Kartu, badge, ikon ---------- */
 .card {
   height: 100%;
@@ -659,8 +655,9 @@ input[type='file'].field__control {
 .site-footer__legal .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.25rem 1.5rem;
+  text-align: center;
 }
 
 .quote-card__text {

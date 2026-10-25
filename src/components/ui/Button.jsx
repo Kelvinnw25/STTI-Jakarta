@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
  * Tombol / tautan bergaya tombol.
  * - `to`: rute internal (Link)
  * - `href`: tautan eksternal
- * - `placeholder`: tautan yang belum aktif (menunggu data resmi); tidak berpindah halaman
+ * - `placeholder`: tombol demonstrasi yang bisa ditekan tetapi tidak melakukan apa pun (tidak berpindah halaman)
  */
 export default function Button({
   to,
@@ -23,16 +23,9 @@ export default function Button({
 
   if (placeholder) {
     return (
-      <a
-        href="#"
-        className={cls}
-        aria-disabled="true"
-        title="Belum tersedia: menunggu informasi resmi"
-        onClick={(e) => e.preventDefault()}
-        {...rest}
-      >
+      <button type="button" className={cls} {...rest}>
         {children}
-      </a>
+      </button>
     )
   }
   if (to) {
