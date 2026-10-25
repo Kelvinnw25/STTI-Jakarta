@@ -10,7 +10,7 @@ import Ph from '../components/ui/Ph'
 import Section from '../components/ui/Section'
 import SectionHeading from '../components/ui/SectionHeading'
 import { images } from '../data/images'
-import { contact } from '../data/site'
+import { contact, externalLink, whatsappChatUrl } from '../data/site'
 import useDemoForm from '../utils/useDemoForm'
 import { required, validateEmail } from '../utils/validation'
 
@@ -25,8 +25,24 @@ const validate = (v) => ({
 
 const cards = [
   { icon: 'pin', title: 'Alamat', lines: [contact.location, <Ph key="a">{contact.addressDetail}</Ph>] },
-  { icon: 'phone', title: 'Telepon', lines: [<Ph key="p">{contact.phone}</Ph>] },
-  { icon: 'mail', title: 'Email', lines: [<Ph key="e">{contact.email}</Ph>] },
+  {
+    icon: 'whatsapp',
+    title: 'WhatsApp',
+    lines: [
+      <a key="w" href={contact.whatsappUrl} {...externalLink}>
+        {contact.whatsapp}
+      </a>,
+    ],
+  },
+  {
+    icon: 'mail',
+    title: 'Email',
+    lines: [
+      <a key="e" href={contact.emailUrl}>
+        {contact.email}
+      </a>,
+    ],
+  },
   { icon: 'clock', title: 'Jam Layanan', lines: [<Ph key="h">{contact.hours}</Ph>] },
 ]
 
@@ -98,15 +114,11 @@ export default function Kontak() {
         title="Lebih Cepat Lewat WhatsApp"
         text="Tanyakan seputar program studi dan pendaftaran langsung kepada tim kami."
         action={
-          <Button placeholder variant="accent" size="lg">
+          <Button href={whatsappChatUrl} {...externalLink} variant="accent" size="lg">
             <Icon name="whatsapp" size={20} /> Chat via WhatsApp
           </Button>
         }
-        note={
-          <>
-            Respon cepat untuk pertanyaan program studi & pendaftaran. Nomor: <Ph>{contact.whatsapp}</Ph>
-          </>
-        }
+        note={`Respon cepat untuk pertanyaan program studi & pendaftaran. Nomor: ${contact.whatsapp}`}
       />
     </>
   )

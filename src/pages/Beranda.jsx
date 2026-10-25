@@ -8,7 +8,7 @@ import Section from '../components/ui/Section'
 import SectionHeading from '../components/ui/SectionHeading'
 import StepCard from '../components/ui/StepCard'
 import { images } from '../data/images'
-import { programs } from '../data/programs'
+import { jenjang } from '../data/programs'
 import { institution } from '../data/site'
 
 const mosaic = [
@@ -74,23 +74,19 @@ export default function Beranda() {
           intro="Pilihan program studi bagi calon mahasiswa yang ingin mempersiapkan diri menjadi tenaga pelayanan, pendidik, dan pemimpin Kristen."
         />
         <ul role="list" className="grid-3">
-          {programs.map((p) => (
-            <li key={p.id}>
+          {jenjang.map((j) => (
+            <li key={j.id}>
               <Card variant="navy" className="program-card">
                 <div className="program-card__media">
-                  <Img image={p.image} />
+                  <Img image={j.image} />
                 </div>
                 <div className="program-card__body">
-                  <Badge tone="light">
-                    Jenjang <Ph>{p.level}</Ph>
-                  </Badge>
+                  <Badge tone="light">Jenjang {j.code}</Badge>
                   <h3>
-                    <Ph>{p.name}</Ph>
+                    {j.name} ({j.code})
                   </h3>
-                  <p>
-                    <Ph>{p.summary}</Ph>
-                  </p>
-                  <Button to="/program-studi" variant="light" size="sm" block>
+                  <p>{j.programs.map((p) => p.name).join(' · ')}</p>
+                  <Button to={`/program-studi?jenjang=${j.id}#detail`} variant="light" size="sm" block>
                     Pelajari Program Studi
                   </Button>
                 </div>

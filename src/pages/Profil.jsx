@@ -43,9 +43,8 @@ export default function Profil() {
 
       <Section tone="navy" labelledBy="about-title">
         <div className="split split--logo">
-          <div className="logo-panel" role="img" aria-label="Logo sementara STTI Jakarta">
-            <span className="logo-panel__mark">STTI</span>
-            <span className="logo-panel__sub">Jakarta</span>
+          <div className="logo-panel">
+            <Img image={images.logo} alt="Logo STTI Jakarta" />
           </div>
           <div className="split__body">
             <SectionHeading id="about-title" align="left" eyebrow="Tentang Kami" title="Deskripsi Institusi" />

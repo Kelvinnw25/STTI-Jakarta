@@ -3,6 +3,11 @@
 const img = (file, w, h, alt) => ({ src: encodeURI(`/assets/${file}`), w, h, alt })
 
 export const images = {
+  // Logo resmi. logoSTTI.png (asli, 2000px) tidak dipakai langsung karena berat dan berpinggiran kosong;
+  // dua salinan di-trim dan diperkecil dari berkas asli tersebut.
+  logo: img('logoSTTI-trim.png', 512, 512, 'Logo STTI Jakarta'),
+  logoSm: img('logoSTTI-sm.png', 128, 128, 'Logo STTI Jakarta'),
+
   building: img('building.png', 231, 307, 'Gedung kampus berkaca biru dengan salib di bagian atas'),
   map: img('Peta Kota di Sekitar Ebenezer Building.png', 1672, 941, 'Peta kawasan sekitar Ebenezer Building di Jl. H.R. Rasuna Said, Jakarta'),
 

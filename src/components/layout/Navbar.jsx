@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { navLinks } from '../../data/site'
+import { images } from '../../data/images'
 import Icon from '../ui/Icon'
 
 export function Logo({ onClick }) {
   return (
     <Link to="/" className="logo" aria-label="STTI Jakarta, ke Beranda" onClick={onClick}>
-      <span className="logo__mark" aria-hidden="true">
-        STTI
-      </span>
-      <span className="logo__text">Jakarta</span>
+      <img className="logo__img" src={images.logoSm.src} width="44" height="44" alt="" />
+      <span className="logo__text">STTI Jakarta</span>
     </Link>
   )
 }

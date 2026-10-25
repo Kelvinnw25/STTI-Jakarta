@@ -5,12 +5,11 @@ import Icon from '../components/ui/Icon'
 import IconTile from '../components/ui/IconTile'
 import Img from '../components/ui/Img'
 import PageHeader from '../components/ui/PageHeader'
-import Ph from '../components/ui/Ph'
 import QuoteCard from '../components/ui/QuoteCard'
 import Section from '../components/ui/Section'
 import SectionHeading from '../components/ui/SectionHeading'
 import { images } from '../data/images'
-import { contact } from '../data/site'
+import { contact, externalLink } from '../data/site'
 
 // Delapan kategori mengikuti label pada wireframe. `area` menentukan posisi di grid (lihat pages.css).
 const tiles = [
@@ -86,22 +85,18 @@ export default function KehidupanKampus() {
         <SectionHeading
           id="social-title"
           title="Ikuti Keseharian Kami"
-          intro="Contoh tampilan galeri bergaya media sosial. Ini bukan embed Instagram yang sebenarnya."
+          intro="Cuplikan suasana kampus bergaya media sosial. Untuk unggahan terbaru, kunjungi akun Instagram kami."
         />
         <div className="social-panel">
           <div className="social-panel__head">
             <div className="social-panel__id">
-              <span className="social-panel__avatar" aria-hidden="true">
-                STTI
-              </span>
+              <img className="social-panel__avatar" src={images.logoSm.src} width="52" height="52" alt="" />
               <div>
                 <p className="social-panel__name">STTI Jakarta</p>
-                <p className="social-panel__handle">
-                  <Ph>{contact.instagram}</Ph>
-                </p>
+                <p className="social-panel__handle">{contact.instagram}</p>
               </div>
             </div>
-            <Button placeholder size="sm">
+            <Button href={contact.instagramUrl} {...externalLink} size="sm">
               <Icon name="instagram" size={18} /> Kunjungi Instagram
             </Button>
           </div>

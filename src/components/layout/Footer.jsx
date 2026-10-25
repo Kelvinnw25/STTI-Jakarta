@@ -32,13 +32,19 @@ export default function Footer() {
               <Ph>{contact.addressDetail}</Ph>
             </li>
             <li>
-              <Ph>{contact.phone}</Ph>
+              <a href={contact.emailUrl}>{contact.email}</a>
             </li>
             <li>
-              <Ph>{contact.email}</Ph>
+              WhatsApp:{' '}
+              <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                {contact.whatsapp}
+              </a>
             </li>
             <li>
-              WhatsApp: <Ph>{contact.whatsapp}</Ph>
+              Instagram:{' '}
+              <a href={contact.instagramUrl} target="_blank" rel="noopener noreferrer">
+                {contact.instagram}
+              </a>
             </li>
           </ul>
         </div>
