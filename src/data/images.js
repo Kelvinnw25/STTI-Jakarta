@@ -44,6 +44,11 @@ export const images = {
 
   worship1: img('worship1.png', 284, 219, 'Mahasiswa memimpin pujian bersama band'),
 
+  // Avatar bulat hasil crop wajah dari foto aset yang ada (kehidupanMahasiswa10, discussion5, kehidupanMahasiswa8).
+  avatarKomunitas1: img('avatarKomunitas1.png', 160, 160, 'Potret mahasiswi'),
+  avatarKomunitas2: img('avatarKomunitas2.png', 160, 160, 'Potret mahasiswa berkacamata'),
+  avatarKomunitas3: img('avatarKomunitas3.png', 160, 160, 'Potret mahasiswa senior'),
+
   // Potret orang: dipakai sebagai avatar pada kartu contoh (placeholder), tanpa nama.
   avatarMan1: img('manModel1.png', 239, 241, 'Potret mahasiswa berkacamata (contoh tampilan)'),
   avatarMan2: img('manModel2.png', 241, 240, 'Potret mahasiswa (contoh tampilan)'),

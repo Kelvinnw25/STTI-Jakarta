@@ -2,7 +2,6 @@ import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
 import Badge from '../components/ui/Badge'
 import Img from '../components/ui/Img'
-import Ph from '../components/ui/Ph'
 import QuoteCard from '../components/ui/QuoteCard'
 import Section from '../components/ui/Section'
 import SectionHeading from '../components/ui/SectionHeading'
@@ -20,9 +19,24 @@ const mosaic = [
 ]
 
 const testimonials = [
-  { avatar: images.avatarWoman, role: <Ph>[Mahasiswa / Alumni]</Ph> },
-  { avatar: images.avatarMan1, role: <Ph>[Mahasiswa / Alumni]</Ph> },
-  { avatar: images.avatarMan2, role: <Ph>[Mahasiswa / Alumni]</Ph> },
+  {
+    avatar: images.avatarKomunitas1,
+    name: 'Natalia Br Sitorus',
+    role: 'Alumni S1 Pendidikan Agama Kristen',
+    text: '“Belajar di sini membuat saya melihat pelayanan dengan cara baru. Teologi tidak berhenti di ruang kelas, tetapi dibawa ke tengah jemaat dan masyarakat.”',
+  },
+  {
+    avatar: images.avatarKomunitas2,
+    name: 'Andreas Wijaya',
+    role: 'Mahasiswa S2 Pendidikan Agama Kristen',
+    text: '“Dosen dan teman-teman mau mendengar dan berdiskusi dengan terbuka. Saya merasa dibentuk bukan hanya dalam pengetahuan, tetapi juga dalam karakter.”',
+  },
+  {
+    avatar: images.avatarKomunitas3,
+    name: 'Yohanes Setiawan',
+    role: 'Mahasiswa S3 Teologi',
+    text: '“Sebagai orang yang sudah lama melayani, saya menemukan ruang untuk merenung, meneliti, dan memperlengkapi diri dengan lebih sungguh-sungguh.”',
+  },
 ]
 
 export default function Beranda() {
@@ -115,11 +129,11 @@ export default function Beranda() {
         <SectionHeading
           id="voices-title"
           title="Suara Komunitas"
-          intro="Bagian ini disiapkan untuk testimoni mahasiswa dan alumni. Kutipan asli belum tersedia."
+          intro="Cerita singkat mahasiswa dan alumni tentang pengalaman mereka bersama STTI Jakarta."
         />
         <ul role="list" className="grid-3">
-          {testimonials.map((t, i) => (
-            <li key={i}>
+          {testimonials.map((t) => (
+            <li key={t.name}>
               <QuoteCard {...t} />
             </li>
           ))}
