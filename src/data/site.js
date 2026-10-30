@@ -29,8 +29,8 @@ export const contact = {
   email: 'indonesiastt@gmail.com',
   emailUrl: 'mailto:indonesiastt@gmail.com',
 
-  whatsapp: '+62 813-2412-4391',
-  whatsappUrl: 'https://wa.me/6281324124391',
+  whatsapp: '+62 896-0202-5878',
+  whatsappUrl: 'https://wa.me/6289602025878',
 
   instagram: '@sttijakarta',
   instagramUrl: 'https://www.instagram.com/sttijakarta/',

@@ -503,11 +503,6 @@ input[type='file'].field__control {
   background: var(--bar-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
-.site-header--accent {
-  --bar-bg: var(--orange);
-  color: var(--navy-900);
-  border-bottom-color: rgba(3, 29, 63, 0.18);
-}
 .site-header__bar {
   display: flex;
   align-items: center;
@@ -566,9 +561,6 @@ input[type='file'].field__control {
   font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-.site-header--accent .nav__link {
-  border-bottom-color: rgba(3, 29, 63, 0.18);
 }
 .nav__link.is-active {
   text-decoration: underline;

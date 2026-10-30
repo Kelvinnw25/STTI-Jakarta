@@ -16,8 +16,6 @@ export function Logo({ onClick }) {
 export default function Navbar() {
   const { pathname } = useLocation()
   const [open, setOpen] = useState(false)
-  // Beranda memakai navbar oranye, halaman lain navy (sesuai referensi).
-  const variant = pathname === '/' ? 'accent' : 'navy'
 
   useEffect(() => setOpen(false), [pathname])
 
@@ -29,7 +27,7 @@ export default function Navbar() {
   }, [open])
 
   return (
-    <header className={`site-header site-header--${variant}`}>
+    <header className="site-header">
       <div className="container site-header__bar">
         <Logo />
         <button
