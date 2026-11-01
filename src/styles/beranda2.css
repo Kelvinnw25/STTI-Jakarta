@@ -307,9 +307,9 @@
   }
   .h2-hero__art {
     position: absolute;
-    right: 0;
+    right: max(0px, calc((100% - var(--container)) / 2)); /* sejajar tepi konten, tidak menempel ke tepi layar */
     bottom: 0;
-    width: min(54vw, 860px);
+    width: min(54vw, 660px);
     margin: 0;
   }
   .h2-hero__star {
@@ -359,7 +359,9 @@
 }
 @media (min-width: 900px) {
   .h2-about {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 34rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 30rem) minmax(0, 1fr);
+    max-width: var(--container); /* ilustrasi berhenti di tepi konten, bukan tepi layar */
+    margin-inline: auto;
     align-items: center;
     gap: 0;
     padding-top: 0;
