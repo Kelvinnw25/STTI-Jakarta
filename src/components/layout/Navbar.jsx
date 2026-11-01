@@ -51,6 +51,9 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
+        <Link to="/pendaftaran" className="site-header__cta">
+          Daftar Sekarang <Icon name="chevron" size={16} />
+        </Link>
       </div>
     </header>
   )

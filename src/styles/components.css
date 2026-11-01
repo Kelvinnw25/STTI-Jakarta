@@ -28,6 +28,13 @@
 .section--soft {
   background: var(--surface);
 }
+.section--art,
+.hero--art {
+  background-color: var(--cream);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .section--navy .eyebrow {
   color: var(--orange);
 }
@@ -564,8 +571,32 @@ input[type='file'].field__control {
 }
 .nav__link.is-active {
   text-decoration: underline;
+  text-decoration-color: #ff4fa3;
   text-decoration-thickness: 3px;
   text-underline-offset: 8px;
+}
+.site-header__cta {
+  display: none;
+}
+@media (min-width: 1140px) {
+  .site-header__cta {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 40px;
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .site-header__cta:hover {
+    background: #dff02b;
+  }
 }
 .nav__link:hover {
   opacity: 0.85;

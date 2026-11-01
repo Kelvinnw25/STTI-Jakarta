@@ -2,11 +2,13 @@ import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
 import CTABand from '../components/ui/CTABand'
 import IconTile from '../components/ui/IconTile'
+import OrgChart from '../components/ui/OrgChart'
 import Img from '../components/ui/Img'
 import PageHeader from '../components/ui/PageHeader'
 import Section from '../components/ui/Section'
 import SectionHeading from '../components/ui/SectionHeading'
 import { images } from '../data/images'
+import { leaderTiers } from '../data/leaders'
 import { institution } from '../data/site'
 
 // Tiga nilai diturunkan langsung dari kalimat Visi pada referensi.
@@ -86,6 +88,16 @@ export default function Profil() {
             </li>
           ))}
         </ol>
+      </Section>
+
+      <Section tone="soft" labelledBy="leaders-title">
+        <SectionHeading
+          id="leaders-title"
+          eyebrow="Kepemimpinan"
+          title="Struktur Kepemimpinan"
+          intro="Susunan pimpinan yayasan, institusi, dan program studi STT Indonesia Jakarta."
+        />
+        <OrgChart tiers={leaderTiers} />
       </Section>
 
       <Section labelledBy="facilities-title">

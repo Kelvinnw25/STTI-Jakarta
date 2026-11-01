@@ -8,6 +8,28 @@ export const images = {
   logo: img('logoSTTI-trim.png', 512, 512, 'Logo STTI Jakarta'),
   logoSm: img('logoSTTI-sm.png', 128, 128, 'Logo STTI Jakarta'),
 
+  // Banner latar section (1920×600, tengah kosong, ilustrasi di sisi kiri-kanan).
+  artHero: img('WhiteContainerReplacement1.jpg', 2400, 1000, ''),
+  artPrograms: img('WhiteContainerReplacement2.jpg', 2400, 1000, ''),
+
+  // Ilustrasi kolase (potongan dari banner WhiteContainerReplacement*) untuk Beranda2.
+  popStudents: img('pop/pop-students.jpg', 940, 640, 'Tiga mahasiswa berdiskusi bersama menghadap laptop'),
+  popBuilding: img('pop/pop-building.jpg', 945, 600, 'Gedung kampus dengan salib besar'),
+  popBible: img('pop/pop-bible.jpg', 860, 700, 'Alkitab terbuka dengan salib kayu'),
+
+  // Ilustrasi kolase latar transparan, dipotong dari mockup references/*2.png untuk halaman versi 2.
+  cutShelf: img('pop/cut-shelf.png', 560, 270, 'Toga wisuda di atas tumpukan buku di depan rak perpustakaan'),
+  cutBible: img('pop/cut-bible.png', 390, 190, 'Alkitab terbuka'),
+  cutBibleCta: img('pop/cut-bible-cta.png', 270, 130, 'Alkitab terbuka'),
+  cutBooksS1: img('pop/cut-books-s1.png', 165, 120, 'Tumpukan buku'),
+  cutBooksCta: img('pop/cut-books-cta.png', 190, 128, 'Tumpukan buku'),
+  cutBooksReq: img('pop/cut-books-req.png', 230, 145, 'Tumpukan buku'),
+  cutBooksForm: img('pop/cut-books-form.png', 255, 145, 'Tumpukan buku'),
+  cutBuildingLife: img('pop/cut-building-life.png', 505, 240, 'Gedung kampus berlantai banyak dikelilingi pepohonan'),
+  cutBuildingReg: img('pop/cut-building-reg.png', 520, 250, 'Gedung kampus berlantai banyak dikelilingi pepohonan'),
+  cutBuildingContact: img('pop/cut-building-contact.png', 560, 268, 'Gedung kampus berlantai banyak dikelilingi pepohonan'),
+  cutPhoto: img('pop/cut-photo.png', 275, 322, 'Pintu masuk gedung bertuliskan STTI Jakarta'),
+
   building: img('building.png', 231, 307, 'Gedung kampus berkaca biru dengan salib di bagian atas'),
 
   chillingRoom: img('ChillingRoom.png', 481, 319, 'Ruang konsultasi dengan sofa, meja kerja, dan rak buku'),

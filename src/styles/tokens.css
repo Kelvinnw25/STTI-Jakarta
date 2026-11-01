@@ -12,6 +12,7 @@
   --line: #dde4ee;
   --surface: #f3f6fb;
   --white: #ffffff;
+  --cream: #f3f0e9; /* sama dengan latar tengah banner WhiteContainerReplacement */
 
   /* Tipografi */
   --font: 'Inter', 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;

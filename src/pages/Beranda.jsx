@@ -9,6 +9,7 @@ import StepCard from '../components/ui/StepCard'
 import { images } from '../data/images'
 import { jenjang } from '../data/programs'
 import { institution } from '../data/site'
+import { testimonials } from '../data/testimonials'
 
 const mosaic = [
   { image: images.k6, cls: 'mosaic__item--big', pos: '40% 50%' },
@@ -18,31 +19,14 @@ const mosaic = [
   { image: images.discussion3, pos: '50% 50%' },
 ]
 
-const testimonials = [
-  {
-    avatar: images.avatarKomunitas1,
-    name: 'Natalia Br Sitorus',
-    role: 'Alumni S1 Pendidikan Agama Kristen',
-    text: '“Belajar di sini membuat saya melihat pelayanan dengan cara baru. Teologi tidak berhenti di ruang kelas, tetapi dibawa ke tengah jemaat dan masyarakat.”',
-  },
-  {
-    avatar: images.avatarKomunitas2,
-    name: 'Andreas Wijaya',
-    role: 'Mahasiswa S2 Pendidikan Agama Kristen',
-    text: '“Dosen dan teman-teman mau mendengar dan berdiskusi dengan terbuka. Saya merasa dibentuk bukan hanya dalam pengetahuan, tetapi juga dalam karakter.”',
-  },
-  {
-    avatar: images.avatarKomunitas3,
-    name: 'Yohanes Setiawan',
-    role: 'Mahasiswa S3 Teologi',
-    text: '“Sebagai orang yang sudah lama melayani, saya menemukan ruang untuk merenung, meneliti, dan memperlengkapi diri dengan lebih sungguh-sungguh.”',
-  },
-]
-
 export default function Beranda() {
   return (
     <>
-      <section className="hero" aria-labelledby="hero-title">
+      <section
+        className="hero hero--art"
+        aria-labelledby="hero-title"
+        style={{ backgroundImage: `url("${images.artHero.src}")` }}
+      >
         <div className="container hero__grid">
           <div className="hero__copy">
             <p className="eyebrow">{institution.shortName}</p>
@@ -81,7 +65,7 @@ export default function Beranda() {
         </div>
       </Section>
 
-      <Section labelledBy="programs-title">
+      <Section labelledBy="programs-title" art={images.artPrograms}>
         <SectionHeading
           id="programs-title"
           title="Program Studi"

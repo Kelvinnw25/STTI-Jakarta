@@ -77,6 +77,29 @@ const paths = {
   menu: <path d="M3 6h18M3 12h18M3 18h18" />,
   close: <path d="M18 6 6 18M6 6l12 12" />,
   arrow: <path d="M5 12h14M12 5l7 7-7 7" />,
+  chevron: <path d="m9 5 7 7-7 7" />,
+  laptop: (
+    <>
+      <rect x="3" y="4" width="18" height="12" rx="2" />
+      <path d="M2 20h20" />
+    </>
+  ),
+  megaphone: <path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15.5 8.5a5 5 0 0 1 0 7M18.5 6a9 9 0 0 1 0 12" />,
+  quote: <path d="M7 7h4v4c0 3-1.5 5-4 6M15 7h4v4c0 3-1.5 5-4 6" />,
+  calendar: (
+    <>
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M3 10h18M8 3v4M16 3v4" />
+    </>
+  ),
+  download: <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />,
+  headset: (
+    <>
+      <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
+      <rect x="2.5" y="14" width="4" height="6" rx="1.5" />
+      <rect x="17.5" y="14" width="4" height="6" rx="1.5" />
+    </>
+  ),
 }
 
 export default function Icon({ name, size = 24, className = '' }) {
